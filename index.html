@@ -1,0 +1,1823 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8" />
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+/>
+
+<title>
+Taruna Patel • AI Backend Engineer
+</title>
+
+<link
+rel="preconnect"
+href="https://fonts.googleapis.com"
+/>
+
+<link
+rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin
+/>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+rel="stylesheet"
+/>
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+:root{
+
+  --bg:#07111f;
+
+  --card:#101b2e;
+
+  --card2:#17263f;
+
+  --primary:#43c6f5;
+
+  --primary2:#2f80ed;
+
+  --text:#ffffff;
+
+  --muted:#b8c2d4;
+
+  --border:rgba(255,255,255,0.08);
+
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+
+  font-family:'Inter',sans-serif;
+
+  background:
+  linear-gradient(
+    180deg,
+    #07111f,
+    #0b1628
+  );
+
+  color:var(--text);
+
+  overflow-x:hidden;
+
+}
+
+/* NAVBAR */
+
+nav{
+
+  position:fixed;
+
+  top:0;
+
+  width:100%;
+
+  backdrop-filter:blur(14px);
+
+  background:rgba(7,17,31,0.72);
+
+  border-bottom:1px solid var(--border);
+
+  z-index:999;
+
+}
+
+.nav-container{
+
+  max-width:1200px;
+
+  margin:auto;
+
+  padding:18px 24px;
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+}
+
+.logo{
+
+  font-size:24px;
+
+  font-weight:800;
+
+  background:
+  linear-gradient(
+    90deg,
+    var(--primary),
+    #9ef6ff
+  );
+
+  -webkit-background-clip:text;
+
+  -webkit-text-fill-color:transparent;
+
+}
+
+.nav-links{
+
+  display:flex;
+
+  gap:30px;
+
+}
+
+.nav-links a{
+
+  text-decoration:none;
+
+  color:var(--muted);
+
+  transition:0.3s;
+
+}
+
+.nav-links a:hover{
+
+  color:var(--primary);
+
+}
+
+/* HERO */
+
+.hero{
+
+  min-height:100vh;
+
+  max-width:1200px;
+
+  margin:auto;
+
+  display:grid;
+
+  grid-template-columns:1fr 430px;
+
+  gap:70px;
+
+  align-items:center;
+
+  padding:140px 24px 80px;
+
+}
+
+.hero-text h1{
+
+  font-size:68px;
+
+  line-height:1.05;
+
+  margin-bottom:24px;
+
+}
+
+.hero-text span{
+
+  background:
+  linear-gradient(
+    90deg,
+    var(--primary),
+    #9ef6ff
+  );
+
+  -webkit-background-clip:text;
+
+  -webkit-text-fill-color:transparent;
+
+}
+
+.hero-text p{
+
+  color:var(--muted);
+
+  line-height:1.9;
+
+  font-size:18px;
+
+  max-width:650px;
+
+}
+
+.hero-buttons{
+
+  display:flex;
+
+  gap:16px;
+
+  margin-top:34px;
+
+  flex-wrap:wrap;
+
+}
+
+.btn{
+
+  padding:15px 28px;
+
+  border:none;
+
+  border-radius:14px;
+
+  cursor:pointer;
+
+  font-weight:700;
+
+  transition:0.3s;
+
+}
+
+.btn-primary{
+
+  background:
+  linear-gradient(
+    90deg,
+    var(--primary),
+    var(--primary2)
+  );
+
+  color:#07111f;
+
+}
+
+.btn-secondary{
+
+  background:transparent;
+
+  border:1px solid var(--border);
+
+  color:white;
+
+}
+
+.btn:hover{
+
+  transform:translateY(-3px);
+
+}
+
+.hero-card{
+
+  background:
+  linear-gradient(
+    180deg,
+    var(--card2),
+    var(--card)
+  );
+
+  border:1px solid var(--border);
+
+  border-radius:28px;
+
+  padding:24px;
+
+}
+
+.profile-img{
+
+  width:100%;
+
+  height:500px;
+
+  object-fit:cover;
+
+  border-radius:22px;
+
+}
+
+.stats{
+
+  margin-top:22px;
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:14px;
+
+}
+
+.stat{
+
+  background:rgba(255,255,255,0.04);
+
+  border:1px solid var(--border);
+
+  border-radius:18px;
+
+  padding:18px;
+
+}
+
+.stat h2{
+
+  color:var(--primary);
+
+  font-size:28px;
+
+}
+
+.stat p{
+
+  color:var(--muted);
+
+  font-size:14px;
+
+  margin-top:4px;
+
+}
+
+/* SECTION */
+
+section{
+
+  padding:100px 24px;
+
+}
+
+.container{
+
+  max-width:1200px;
+
+  margin:auto;
+
+}
+
+.section-title{
+
+  text-align:center;
+
+  font-size:44px;
+
+  margin-bottom:16px;
+
+}
+
+.section-sub{
+
+  text-align:center;
+
+  color:var(--muted);
+
+  max-width:760px;
+
+  margin:auto auto 60px;
+
+  line-height:1.8;
+
+}
+
+/* SKILLS */
+
+.grid{
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(260px,1fr));
+
+  gap:24px;
+
+}
+
+.card{
+
+  background:var(--card);
+
+  border:1px solid var(--border);
+
+  border-radius:24px;
+
+  padding:28px;
+
+  transition:0.3s;
+
+}
+
+.card:hover{
+
+  transform:translateY(-6px);
+
+  border-color:rgba(67,198,245,0.35);
+
+}
+
+.card h3{
+
+  color:var(--primary);
+
+  margin-bottom:14px;
+
+}
+
+.card p,
+.card li{
+
+  color:var(--muted);
+
+  line-height:1.8;
+
+}
+
+.card ul{
+
+  margin-left:18px;
+
+}
+
+/* EXPERIENCE */
+
+.timeline{
+
+  border-left:
+  2px solid rgba(67,198,245,0.25);
+
+  padding-left:26px;
+
+}
+
+.timeline-item{
+
+  margin-bottom:40px;
+
+  position:relative;
+
+}
+
+.timeline-item::before{
+
+  content:'';
+
+  width:14px;
+
+  height:14px;
+
+  border-radius:50%;
+
+  background:var(--primary);
+
+  position:absolute;
+
+  left:-34px;
+
+  top:10px;
+
+}
+
+/* PROJECTS */
+
+.projects-grid{
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(340px,1fr));
+
+  gap:28px;
+
+}
+
+.project-card{
+
+  background:var(--card);
+
+  border:1px solid var(--border);
+
+  border-radius:24px;
+
+  overflow:hidden;
+
+  transition:0.3s;
+
+}
+
+.project-card:hover{
+
+  transform:translateY(-8px);
+
+}
+
+.project-banner{
+
+  height:180px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  font-size:72px;
+
+  background:
+  linear-gradient(
+    135deg,
+    #132742,
+    #0e1a2d
+  );
+
+}
+
+.project-content{
+
+  padding:26px;
+
+}
+
+.project-content h3{
+
+  color:var(--primary);
+
+  margin-bottom:14px;
+
+}
+
+.project-content p{
+
+  color:var(--muted);
+
+  line-height:1.8;
+
+}
+
+.tags{
+
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:10px;
+
+  margin-top:18px;
+
+}
+
+.tag{
+
+  background:
+  rgba(67,198,245,0.1);
+
+  color:var(--primary);
+
+  padding:8px 12px;
+
+  border-radius:999px;
+
+  font-size:13px;
+
+}
+
+/* CONTACT */
+
+.contact{
+
+  text-align:center;
+
+}
+
+.contact-links{
+
+  display:flex;
+
+  justify-content:center;
+
+  flex-wrap:wrap;
+
+  gap:18px;
+
+  margin-top:32px;
+
+}
+
+.contact-links a{
+
+  text-decoration:none;
+
+  color:white;
+
+  background:
+  rgba(255,255,255,0.05);
+
+  border:1px solid var(--border);
+
+  padding:15px 20px;
+
+  border-radius:14px;
+
+  transition:0.3s;
+
+}
+
+.contact-links a:hover{
+
+  border-color:var(--primary);
+
+  color:var(--primary);
+
+}
+
+/* CHATBOT */
+
+.chat-btn{
+
+  position:fixed;
+
+  right:28px;
+
+  bottom:28px;
+
+  width:72px;
+
+  height:72px;
+
+  border:none;
+
+  border-radius:50%;
+
+  cursor:pointer;
+
+  font-size:28px;
+
+  background:
+  linear-gradient(
+    90deg,
+    var(--primary),
+    var(--primary2)
+  );
+
+  color:white;
+
+  z-index:999;
+
+  box-shadow:
+  0 0 40px rgba(67,198,245,0.3);
+
+}
+
+.chat-box{
+
+  position:fixed;
+
+  right:28px;
+
+  bottom:120px;
+
+  width:390px;
+
+  height:620px;
+
+  background:var(--card);
+
+  border:1px solid var(--border);
+
+  border-radius:28px;
+
+  overflow:hidden;
+
+  display:none;
+
+  flex-direction:column;
+
+  z-index:999;
+
+}
+
+.chat-header{
+
+  padding:22px;
+
+  background:
+  linear-gradient(
+    90deg,
+    var(--primary),
+    var(--primary2)
+  );
+
+  color:white;
+
+  font-weight:700;
+
+}
+
+.chat-messages{
+
+  flex:1;
+
+  overflow-y:auto;
+
+  padding:20px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:16px;
+
+}
+
+.message{
+
+  max-width:85%;
+
+  padding:14px 16px;
+
+  border-radius:18px;
+
+  line-height:1.7;
+
+  font-size:14px;
+
+}
+
+.user{
+
+  align-self:flex-end;
+
+  background:
+  linear-gradient(
+    90deg,
+    var(--primary),
+    var(--primary2)
+  );
+
+  color:white;
+
+}
+
+.bot{
+
+  align-self:flex-start;
+
+  background:#1a2740;
+
+}
+
+.chat-input{
+
+  display:flex;
+
+  gap:10px;
+
+  padding:18px;
+
+  border-top:1px solid var(--border);
+
+}
+
+.chat-input input{
+
+  flex:1;
+
+  background:#0f1b30;
+
+  border:1px solid var(--border);
+
+  border-radius:14px;
+
+  padding:14px;
+
+  color:white;
+
+  outline:none;
+
+}
+
+.chat-input button{
+
+  width:54px;
+
+  border:none;
+
+  border-radius:14px;
+
+  cursor:pointer;
+
+  background:
+  linear-gradient(
+    90deg,
+    var(--primary),
+    var(--primary2)
+  );
+
+  color:white;
+
+  font-size:20px;
+
+}
+
+/* FOOTER */
+
+footer{
+
+  text-align:center;
+
+  padding:30px;
+
+  color:var(--muted);
+
+  border-top:1px solid var(--border);
+
+}
+
+/* MOBILE */
+
+@media(max-width:980px){
+
+.hero{
+
+  grid-template-columns:1fr;
+
+}
+
+.hero-text{
+
+  text-align:center;
+
+}
+
+.hero-text p{
+
+  margin:auto;
+
+}
+
+.hero-buttons{
+
+  justify-content:center;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.hero-text h1{
+
+  font-size:46px;
+
+}
+
+.nav-links{
+
+  display:none;
+
+}
+
+.chat-box{
+
+  width:92%;
+
+  right:4%;
+
+  height:75vh;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="nav-container">
+
+<div class="logo">
+Taruna Patel
+</div>
+
+<div class="nav-links">
+
+<a href="#skills">
+Skills
+</a>
+
+<a href="#experience">
+Experience
+</a>
+
+<a href="#projects">
+Projects
+</a>
+
+<a href="#contact">
+Contact
+</a>
+
+</div>
+
+</div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-text">
+
+<h1>
+
+AI & Fintech <br>
+
+<span>
+Backend Engineer
+</span>
+
+</h1>
+
+<p>
+
+Backend engineer specializing in OCR systems,
+PDF processing, dataframe analytics,
+distributed systems, fintech automation,
+FastAPI, Django, Celery, RabbitMQ,
+and scalable AI-driven document pipelines.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="#projects">
+
+<button class="btn btn-primary">
+View Projects
+</button>
+
+</a>
+
+<a href="mailto:tarunapatel2199@gmail.com">
+
+<button class="btn btn-secondary">
+Hire Me
+</button>
+
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-card">
+
+<img
+src="Taruna.png"
+class="profile-img"
+/>
+
+<div class="stats">
+
+<div class="stat">
+
+<h2>
+90+
+</h2>
+
+<p>
+Document Formats
+</p>
+
+</div>
+
+<div class="stat">
+
+<h2>
+85%
+</h2>
+
+<p>
+Processing Speedup
+</p>
+
+</div>
+
+<div class="stat">
+
+<h2>
+75%
+</h2>
+
+<p>
+Cloud Optimization
+</p>
+
+</div>
+
+<div class="stat">
+
+<h2>
+2+
+</h2>
+
+<p>
+Years Experience
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+<div class="container">
+
+<h2 class="section-title">
+Technical Skills
+</h2>
+
+<p class="section-sub">
+
+Production-grade backend engineering
+focused on OCR, fintech automation,
+and distributed systems.
+
+</p>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>
+Backend Engineering
+</h3>
+
+<p>
+
+Python, FastAPI, Django,
+Flask, REST APIs,
+Celery, RabbitMQ,
+Celery Beat.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+OCR & PDF Processing
+</h3>
+
+<p>
+
+Tesseract OCR,
+Google Vision,
+PDF parsing,
+image extraction,
+document intelligence.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+Dataframe Analytics
+</h3>
+
+<p>
+
+Pandas, PandasAI,
+NumPy,
+transaction analytics,
+financial data processing.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>
+Cloud & Infrastructure
+</h3>
+
+<p>
+
+Docker,
+GCP,
+Linux,
+distributed worker systems,
+scalable asynchronous architecture.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- EXPERIENCE -->
+
+<section id="experience">
+
+<div class="container">
+
+<h2 class="section-title">
+Experience
+</h2>
+
+<p class="section-sub">
+
+Building intelligent backend systems
+for fintech and automation.
+
+</p>
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<div class="card">
+
+<h3>
+Software Engineer • Hobbiate Technologies
+</h3>
+
+<p>
+Dec 2023 – Present
+</p>
+
+<ul>
+
+<li>
+Engineered scalable Python pipelines for financial document processing.
+</li>
+
+<li>
+Built configurable parsing systems supporting multiple bank statement formats.
+</li>
+
+<li>
+Developed production-grade REST APIs for fintech workflows.
+</li>
+
+<li>
+Implemented dataframe analytics using Pandas and PandasAI.
+</li>
+
+<li>
+Designed PII masking and anonymization systems.
+</li>
+
+<li>
+Managed distributed OCR and PDF processing systems in production.
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="card">
+
+<h3>
+Backend Developer Intern • Highest Lamp
+</h3>
+
+<p>
+Feb 2022 – Jul 2023
+</p>
+
+<ul>
+
+<li>
+Implemented secure authentication and authorization systems.
+</li>
+
+<li>
+Resolved critical API and database issues improving stability.
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="card">
+
+<h3>
+Backend Developer Intern • Kabadi Techno Pvt. Ltd.
+</h3>
+
+<p>
+Aug 2022 – Jan 2023
+</p>
+
+<ul>
+
+<li>
+Developed scalable Django e-commerce backend systems.
+</li>
+
+<li>
+Built JWT-based authentication workflows.
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+<div class="container">
+
+<h2 class="section-title">
+Featured Projects
+</h2>
+
+<p class="section-sub">
+
+Real-world OCR, fintech,
+and distributed processing systems.
+
+</p>
+
+<div class="projects-grid">
+
+<div class="project-card">
+
+<div class="project-banner">
+📄
+</div>
+
+<div class="project-content">
+
+<h3>
+Finlens Financial Statement Analysis
+</h3>
+
+<p>
+
+Architected asynchronous distributed
+OCR and PDF processing pipelines
+using Celery and RabbitMQ on GCP.
+
+Built concurrent systems for OCR,
+parsing, dataframe generation,
+analytics, and Excel reporting.
+
+</p>
+
+<div class="tags">
+
+<div class="tag">
+Python
+</div>
+
+<div class="tag">
+OCR
+</div>
+
+<div class="tag">
+Pandas
+</div>
+
+<div class="tag">
+Celery
+</div>
+
+<div class="tag">
+RabbitMQ
+</div>
+
+<div class="tag">
+GCP
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="project-card">
+
+<div class="project-banner">
+📊
+</div>
+
+<div class="project-content">
+
+<h3>
+AI Dataframe Analytics
+</h3>
+
+<p>
+
+Developed recurring transaction
+detection and global analytics
+workflows using Pandas and PandasAI
+for large-scale financial datasets.
+
+</p>
+
+<div class="tags">
+
+<div class="tag">
+Pandas
+</div>
+
+<div class="tag">
+PandasAI
+</div>
+
+<div class="tag">
+Analytics
+</div>
+
+<div class="tag">
+Fintech
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="project-card">
+
+<div class="project-banner">
+🛒
+</div>
+
+<div class="project-content">
+
+<h3>
+Django E-Commerce Platform
+</h3>
+
+<p>
+
+Built scalable e-commerce backend
+systems featuring authentication,
+cart workflows,
+payment integration,
+invoice systems,
+and order tracking.
+
+</p>
+
+<div class="tags">
+
+<div class="tag">
+Django
+</div>
+
+<div class="tag">
+Payments
+</div>
+
+<div class="tag">
+Authentication
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="container contact">
+
+<h2 class="section-title">
+Contact
+</h2>
+
+<p class="section-sub">
+
+Open to backend engineering,
+AI engineering,
+and fintech opportunities.
+
+</p>
+
+<div class="contact-links">
+
+<a href="mailto:tarunapatel2199@gmail.com">
+📧 Email
+</a>
+
+<a href="tel:+918840375949">
+📱 Call
+</a>
+
+<a
+href="https://github.com/Taruna21"
+target="_blank"
+>
+💻 GitHub
+</a>
+
+<a
+href="https://linkedin.com/in/tarunapatel"
+target="_blank"
+>
+💼 LinkedIn
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- AI CHAT -->
+
+```html
+<!-- AI CHAT -->
+
+<button
+class="chat-btn"
+onclick="toggleChat()"
+>
+💬
+</button>
+
+<div
+class="chat-box"
+id="chatBox"
+>
+
+<div class="chat-header">
+AI Portfolio Assistant
+</div>
+
+<div
+class="chat-messages"
+id="chatMessages"
+>
+
+<div class="message bot">
+
+Hi 👋
+
+I'm Taruna Patel's AI portfolio assistant.
+
+Ask me about Taruna's experience,
+skills, or projects.
+
+</div>
+
+</div>
+
+<div class="chat-input">
+
+<input
+type="text"
+id="userInput"
+placeholder="Ask about Taruna..."
+/>
+
+<button onclick="sendMessage()">
+➤
+</button>
+
+</div>
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+© 2026 Taruna Patel • AI Backend Engineer
+
+</footer>
+
+<!-- SCRIPT -->
+
+<script>
+
+const API_KEY =
+"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";
+
+const MODEL =
+"llama-3.3-70b-versatile";
+
+const chatBox =
+document.getElementById("chatBox");
+
+const chatMessages =
+document.getElementById("chatMessages");
+
+function toggleChat(){
+
+if(chatBox.style.display === "flex"){
+
+chatBox.style.display = "none";
+
+}
+else{
+
+chatBox.style.display = "flex";
+
+}
+
+}
+
+function addMessage(text,sender){
+
+const div =
+document.createElement("div");
+
+div.className =
+`message ${sender}`;
+
+div.innerHTML =
+text.replace(/\\n/g,"<br>");
+
+chatMessages.appendChild(div);
+
+chatMessages.scrollTop =
+chatMessages.scrollHeight;
+
+}
+
+function showTyping(){
+
+const div =
+document.createElement("div");
+
+div.className =
+"message bot";
+
+div.id =
+"typing";
+
+div.innerHTML =
+"Analyzing portfolio...";
+
+chatMessages.appendChild(div);
+
+}
+
+function removeTyping(){
+
+const typing =
+document.getElementById("typing");
+
+if(typing){
+
+typing.remove();
+
+}
+
+}
+
+async function askAI(message){
+
+try{
+
+const response =
+await fetch(
+
+"https://api.groq.com/openai/v1/chat/completions",
+
+{
+
+method:"POST",
+
+headers:{
+
+"Content-Type":"application/json",
+
+"Authorization":
+`Bearer ${API_KEY}`
+
+},
+
+body:JSON.stringify({
+
+model:MODEL,
+
+temperature:0.3,
+
+max_tokens:300,
+
+messages:[
+
+{
+
+role:"system",
+
+content:`
+
+You are Taruna Patel's AI portfolio assistant.
+
+ONLY answer questions related to:
+- Taruna Patel
+- skills
+- projects
+- OCR
+- PDF processing
+- Pandas
+- FastAPI
+- Django
+- fintech systems
+- distributed systems
+- GCP
+- Celery
+- RabbitMQ
+
+If question is unrelated reply EXACTLY:
+
+"I can only answer questions related to Taruna Patel's portfolio and experience."
+
+Portfolio Information:
+
+Taruna Patel is an AI Backend Engineer specializing in:
+- Python
+- FastAPI
+- Django
+- Flask
+- OCR systems
+- PDF parsing
+- Pandas dataframe analytics
+- fintech automation
+- distributed systems
+- Celery
+- RabbitMQ
+- Docker
+- GCP
+
+Experience:
+- Software Engineer at Hobbiate Technologies
+- Backend Developer Intern at Highest Lamp
+- Backend Developer Intern at Kabadi Techno Pvt. Ltd.
+
+Achievements:
+- Automated parsing for 90+ document formats
+- Reduced processing time by 85%
+- Built distributed OCR pipelines
+- Developed scalable fintech systems
+
+Projects:
+- Finlens Financial Statement Analysis
+- OCR & PDF Processing Pipelines
+- AI Dataframe Analytics
+- Django E-Commerce Platform
+- Django Social Media Platform
+
+`
+
+},
+
+{
+
+role:"user",
+
+content:message
+
+}
+
+]
+
+})
+
+}
+
+);
+
+const data =
+await response.json();
+
+console.log(data);
+
+if(data.error){
+
+return data.error.message;
+
+}
+
+return (
+
+data.choices?.[0]?.message?.content
+
+||
+
+"No response."
+
+);
+
+}
+catch(error){
+
+console.log(error);
+
+return "Unable to connect AI assistant.";
+
+}
+
+}
+
+async function sendMessage(){
+
+const input =
+document.getElementById("userInput");
+
+const message =
+input.value.trim();
+
+if(!message) return;
+
+addMessage(message,"user");
+
+input.value = "";
+
+showTyping();
+
+const reply =
+await askAI(message);
+
+removeTyping();
+
+addMessage(reply,"bot");
+
+}
+
+document
+.getElementById("userInput")
+.addEventListener(
+
+"keypress",
+
+function(e){
+
+if(e.key === "Enter"){
+
+sendMessage();
+
+}
+
+}
+
+);
+
+</script>
+
+</body>
+</html>
+```
+
